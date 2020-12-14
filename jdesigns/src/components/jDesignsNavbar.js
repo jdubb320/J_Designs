@@ -8,7 +8,7 @@ function JDesignsNavbar(){
             <Navbar.Brand className="mr-auto">J DESIGNS</Navbar.Brand>
             <Nav>
                 <Nav.Link><p className="raleway-font">ABOUT</p></Nav.Link>
-                <Nav.Link><p className="raleway-font">PRICE</p></Nav.Link>
+                <Nav.Link><p className="raleway-font">PRICING</p></Nav.Link>
                 <Nav.Link><p className="raleway-font">CONTACT</p></Nav.Link>
             </Nav>
         </Navbar>

@@ -7,3 +7,12 @@
     font-family: raleway;
     color: #000000;
 }
+
+.nav-link {
+    font-weight: bold;
+}
+
+.navbar-brand {
+    font-size: 200%;
+    font-weight: bolder;
+}

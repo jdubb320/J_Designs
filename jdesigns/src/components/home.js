@@ -1,3 +1,4 @@
+import Button from 'react-bootstrap/Button'
 import './home.css'
 import JDesignsNavbar from './jDesignsNavbar'
 
@@ -7,8 +8,11 @@ function Home(){
             <header>
                 <JDesignsNavbar/>
             </header>
-            <h2>Need a beautiful website?</h2>
-            <h3>Go no further....</h3>
+            <h1>Need a beautiful website?</h1>
+            <h2>Go no further....</h2>
+            <div className="flex-container">
+                <Button>Schedule Consultation</Button>
+            </div>
         </div>
     );
 }
