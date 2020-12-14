@@ -5,7 +5,7 @@
 
 .raleway-font {
     font-family: raleway;
-    color: #000000;
+    color: white;
 }
 
 .nav-link {
@@ -15,4 +15,8 @@
 .navbar-brand {
     font-size: 200%;
     font-weight: bolder;
+}
+
+.navbar-light .navbar-brand {
+    color: white;
 }
