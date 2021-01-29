@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import axios from "axios";
 
 import heroBackground from "../images/darkToneWithTechBackground.jpg";
 import {ContactModal} from "./contactModal";
@@ -40,6 +40,8 @@ class Hero extends Component {
       event.preventDefault(event);
       console.log(event.target.name.value);
       console.log(event.target.email.value);
+
+
     };
 
     return (
