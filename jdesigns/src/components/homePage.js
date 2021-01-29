@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import heroBackground from "../images/darkToneWithTechBackground.jpg";
 import {ContactModal} from "./contactModal";
 
+import "./homePage.css";
+
 class Hero extends Component {
   render() {
     const style = {
@@ -40,11 +42,16 @@ class Hero extends Component {
       event.preventDefault(event);
       console.log(event.target.name.value);
       console.log(event.target.email.value);
+      console.log(event.target.message.value);
 
       const requestOptions = {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({name: event.target.name.value, email: event.target.email.value})
+        body: JSON.stringify({
+          name: event.target.name.value,
+          email: event.target.email.value,
+          message: event.target.message.value
+        })
       };
 
       fetch("http://localhost:5000/api/v1/send", requestOptions)
