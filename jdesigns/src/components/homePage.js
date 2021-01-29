@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 
 import heroBackground from "../images/darkToneWithTechBackground.jpg";
 import {ContactModal} from "./contactModal";
@@ -35,13 +34,22 @@ class Hero extends Component {
       padding: "1rem",
     };
 
+    
     const triggerText = "fuck";
     const onSubmit = (event) => {
       event.preventDefault(event);
       console.log(event.target.name.value);
       console.log(event.target.email.value);
 
+      const requestOptions = {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({name: event.target.name.value, email: event.target.email.value})
+      };
 
+      fetch("http://localhost:5000/api/v1/send", requestOptions)
+        .then(response => response.json())
+        .then(data => console.log(data));
     };
 
     return (
