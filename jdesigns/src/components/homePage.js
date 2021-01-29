@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
-import heroBackground from "../images/darkToneWithTechBackground.jpg";
 
+import heroBackground from "../images/darkToneWithTechBackground.jpg";
+import ConsultModal from "./consultModal";
 class Hero extends Component {
   render() {
     const style = {
@@ -32,6 +33,7 @@ class Hero extends Component {
       margin: "1rem",
       padding: "1rem",
     };
+
     return (
       <div style={style}>
         <img src={heroBackground} style={style} />
@@ -39,6 +41,7 @@ class Hero extends Component {
         <h2 style={h2Style}>
           I'm here to create your <br /> next website!
         </h2>
+        <ConsultModal/>
       </div>
     );
   }

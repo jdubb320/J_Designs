@@ -8,7 +8,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SvgLogo2/>
         <HeaderButtons />
         <Hero/>
       </div>
