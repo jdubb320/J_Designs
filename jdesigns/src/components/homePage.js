@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 
 import heroBackground from "../images/darkToneWithTechBackground.jpg";
-import ConsultModal from "./consultModal";
+import {ContactModal} from "./contactModal";
+
 class Hero extends Component {
   render() {
     const style = {
@@ -34,6 +35,13 @@ class Hero extends Component {
       padding: "1rem",
     };
 
+    const triggerText = "fuck";
+    const onSubmit = (event) => {
+      event.preventDefault(event);
+      console.log(event.target.name.value);
+      console.log(event.target.email.value);
+    };
+
     return (
       <div style={style}>
         <img src={heroBackground} style={style} />
@@ -41,7 +49,7 @@ class Hero extends Component {
         <h2 style={h2Style}>
           I'm here to create your <br /> next website!
         </h2>
-        <ConsultModal/>
+        <ContactModal triggerText={triggerText} onSubmit={onSubmit} />
       </div>
     );
   }
