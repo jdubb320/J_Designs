@@ -36,8 +36,14 @@ class Hero extends Component {
       padding: "1rem",
     };
 
+    const contactModalStyle = {
+      position: "relative",
+      textAlign: "center",
+      margin: "1rem",
+      padding: "1rem",
+    };
     
-    const triggerText = "fuck";
+    const triggerText = "SCHEDULE A FREE CONSULTATION";
     const onSubmit = (event) => {
       event.preventDefault(event);
       console.log(event.target.name.value);
@@ -66,7 +72,9 @@ class Hero extends Component {
         <h2 style={h2Style}>
           I'm here to create your <br /> next website!
         </h2>
-        <ContactModal triggerText={triggerText} onSubmit={onSubmit} />
+        <div style={contactModalStyle}>
+          <ContactModal triggerText={triggerText} onSubmit={onSubmit} />
+        </div>
       </div>
     );
   }
